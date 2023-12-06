@@ -18,12 +18,12 @@ function receiveSerial() {
     return;
   }
 
-  let data = JSON.parse(line).data;
-  let a0 = data.A0;
+//   let data = JSON.parse(line).data;
+//   let a0 = data.A0;
 
-  cBackgroundColor = map(a0.value, a0.min, a0.max, 0, 255);
-  readyToReceive = true;
-}
+//   cBackgroundColor = map(a0.value, a0.min, a0.max, 0, 255);
+//   readyToReceive = true;
+// }
 
 function connectToSerial() {
   if (!mSerial.opened()) {
@@ -59,4 +59,5 @@ function draw() {
   if (mSerial.availableBytes() > 0) {
     receiveSerial();
   }
+}
 }
